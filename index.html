@@ -1,116 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChicagoCapital</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
-    body {background:#f9f9f9; color:#222;}
-    header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-    header img {width: 150px; margin-bottom: 20px;}
-    header h1 {font-size: 3em; margin-bottom: 10px;}
-    header p {font-size: 1.2em; margin-bottom: 30px;}
-    .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #fff;
-      font-size: 1.5em;
-      transition: transform 0.3s, color 0.3s;
-    }
-    .social-icons a:hover {
-      color: #ffcc00;
-      transform: scale(1.2);
-    }
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-    section h2 {text-align:center; font-size:2em; margin-bottom:20px;}
-    section p {font-size:1.1em; line-height:1.6; text-align:center;}
-    footer {
-      background:#222;
-      color:#fff;
-      text-align:center;
-      padding:20px;
-      margin-top:50px;
-    }
-
-    /* 🔥 Burn Tracker Styling */
-    #burn-tracker {
-      background:#0f172a;
-      color:#fff;
-      padding:50px 20px;
-      text-align:center;
-    }
-    #burn-tracker h2 {
-      font-size:2em;
-      color:#fbbf24;
-      margin-bottom:10px;
-    }
-    #burn-tracker p {
-      color:#94a3b8;
-      margin-bottom:20px;
-    }
-    #burn-card {
-      background:#1e293b;
-      border-radius:20px;
-      box-shadow:0 0 20px rgba(255,255,255,0.1);
-      padding:25px;
-      max-width:500px;
-      margin:auto;
-    }
-    #burn-card p {font-size:1.1em; margin:10px 0;}
-    @media (max-width: 600px) {
-      header h1 {font-size:2em;}
-      header p {font-size:1em;}
-      .social-icons a {font-size:1.2em; margin:0 5px;}
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Banner & Logo -->
-  <header>
-    <img src="https://turquoise-negative-scorpion-35.mypinata.cloud/ipfs/bafybeibjfnaw5b3utmx3a6a6b3xbmyynccizepd4kow2fdh6f7ikon3rg4" alt="ChicagoCapital Logo">
-    <h1>ChicagoCapital</h1>
-    <p>CICAL Token – Transparent, Sustainable, and Rewarding Crypto Ecosystem</p>
-    <div class="social-icons">
-      <a href="https://x.com/Chicag0Capital?t=M5s5tdMSW51hxF2vF9hVQA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://t.me/Chicag0_Capital" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="mailto:info@chicagocapitaloffical.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/ChicagoCapital" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </header>
-
-  <!-- 🔥 Burn Tracker -->
-  <section id="burn-tracker">
-    <h2>🔥 CICAL Burn Tracker</h2>
-    <p>Pantau pembakaran token CICAL secara real-time — transparansi komunitas & pertumbuhan.</p>
-
-    <div id="burn-card">
-      <p>💎 <b>Total Supply Awal:</b> 1,000,000,000 CICAL</p>
-      <p>🔥 <b>Token Terbakar:</b> <span id="burned" style="color:#f87171;">Memuat...</span></p>
-      <p>🪙 <b>Supply Tersisa:</b> <span id="remaining" style="color:#4ade80;">Memuat...</span></p>
-      <canvas id="burnChart" height="100" style="margin-top:25px;"></canvas>
-    </div>
-
-    <p style="margin-top:20px; font-size:0.9em;">
-      Kontrak: <a href="https://bscscan.com/token/0xFAF994EBf5598BDC70f157957957333Ffc687b09" target="_blank" style="color:#38bdf8; text-decoration:none;">
-        0xFAF994EBf5598BDC70f157957957333Ffc687b09
-      </a>
-    </p>
-  </section>
-
-  <!-- About Token -->
-  <section id="about">
-    <h2>About CICAL Token</h2>
-    <p>
-      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 1%
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>ChicagoCapital</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+  <style>  
+    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}  
+    body {background:#f9f9f9; color:#222;}  
+    header {  
+      background: linear-gradient(135deg, #1e3c72, #2a5298);  
+      color: #fff;  
+      text-align: center;  
+      padding: 80px 20px;  
+    }  
+    header img {width: 150px; margin-bottom: 20px;}  
+    header h1 {font-size: 3em; margin-bottom: 10px;}  
+    header p {font-size: 1.2em; margin-bottom: 30px;}  
+    .social-icons a {  
+      display: inline-block;  
+      margin: 0 10px;  
+      color: #fff;  
+      font-size: 1.5em;  
+      transition: transform 0.3s, color 0.3s;  
+    }  
+    .social-icons a:hover {  
+      color: #ffcc00;  
+      transform: scale(1.2);  
+    }  
+    section {  
+      max-width: 1000px;  
+      margin: 50px auto;  
+      padding: 0 20px;  
+    }  
+    section h2 {text-align:center; font-size:2em; margin-bottom:20px;}  
+    section p {font-size:1.1em; line-height:1.6; text-align:center;}  
+    footer {  
+      background:#222;  
+      color:#fff;  
+      text-align:center;  
+      padding:20px;  
+      margin-top:50px;  
+    }  
+    @media (max-width: 600px) {  
+      header h1 {font-size:2em;}  
+      header p {font-size:1em;}  
+      .social-icons a {font-size:1.2em; margin:0 5px;}  
+    }  
+  </style>  
+</head>  
+<body>    <!-- Banner & Logo -->    <header>  
+    <img src="https://turquoise-negative-scorpion-35.mypinata.cloud/ipfs/bafybeibjfnaw5b3utmx3a6a6b3xbmyynccizepd4kow2fdh6f7ikon3rg4" alt="ChicagoCapital Logo">  
+    <h1>ChicagoCapital</h1>  
+    <p>CICAL Token – Transparent, Sustainable, and Rewarding Crypto Ecosystem</p>  
+    <div class="social-icons">  
+      <a href="https://x.com/Chicag0Capital?t=M5s5tdMSW51hxF2vF9hVQA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>  
+      <a href="https://t.me/Chicag0_Capital" target="_blank"><i class="fab fa-telegram"></i></a>  
+      <a href="mailto:info@chicagocapitaloffical.com"><i class="fas fa-envelope"></i></a>  
+      <a href="https://github.com/ChicagoCapital" target="_blank"><i class="fab fa-github"></i></a>  
+    </div>  
+  </header>    <!-- About Token -->    <section id="about">  
+    <h2>About CICAL Token</h2>  
+    <p>  
+      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 1% for holders, 1% for devs and marketing. Strategic investments trigger buybacks to ensure sustainable growth.  
+    </p>  
+  </section>    <!-- Project Goal -->    <section id="goal">  
+    <h2>Our Mission</h2>  
+    <p>  
+      Our goal is to create a transparent, rewarding, and sustainable crypto ecosystem that benefits holders, developers, and investors while driving blockchain innovation.  
+    </p>  
+  </section>    <!-- Footer -->    <footer>  
+    &copy; 2025 ChicagoCapital | <a href="mailto:info@chicagocapitaloffical.com" style="color:#ffcc00;">Contact Us</a>  
+  </footer>  </body>  
+</html>
