@@ -12,7 +12,7 @@
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px 40px;
     }
     header img {width: 150px; margin-bottom: 20px;}
     header h1 {font-size: 3em; margin-bottom: 10px;}
@@ -42,6 +42,32 @@
       padding:20px;
       margin-top:50px;
     }
+
+    /* 🔥 Burn Tracker Styling */
+    #burn-tracker {
+      background:#0f172a;
+      color:#fff;
+      padding:50px 20px;
+      text-align:center;
+    }
+    #burn-tracker h2 {
+      font-size:2em;
+      color:#fbbf24;
+      margin-bottom:10px;
+    }
+    #burn-tracker p {
+      color:#94a3b8;
+      margin-bottom:20px;
+    }
+    #burn-card {
+      background:#1e293b;
+      border-radius:20px;
+      box-shadow:0 0 20px rgba(255,255,255,0.1);
+      padding:25px;
+      max-width:500px;
+      margin:auto;
+    }
+    #burn-card p {font-size:1.1em; margin:10px 0;}
     @media (max-width: 600px) {
       header h1 {font-size:2em;}
       header p {font-size:1em;}
@@ -64,26 +90,27 @@
     </div>
   </header>
 
+  <!-- 🔥 Burn Tracker -->
+  <section id="burn-tracker">
+    <h2>🔥 CICAL Burn Tracker</h2>
+    <p>Pantau pembakaran token CICAL secara real-time — transparansi komunitas & pertumbuhan.</p>
+
+    <div id="burn-card">
+      <p>💎 <b>Total Supply Awal:</b> 1,000,000,000 CICAL</p>
+      <p>🔥 <b>Token Terbakar:</b> <span id="burned" style="color:#f87171;">Memuat...</span></p>
+      <p>🪙 <b>Supply Tersisa:</b> <span id="remaining" style="color:#4ade80;">Memuat...</span></p>
+      <canvas id="burnChart" height="100" style="margin-top:25px;"></canvas>
+    </div>
+
+    <p style="margin-top:20px; font-size:0.9em;">
+      Kontrak: <a href="https://bscscan.com/token/0xFAF994EBf5598BDC70f157957957333Ffc687b09" target="_blank" style="color:#38bdf8; text-decoration:none;">
+        0xFAF994EBf5598BDC70f157957957333Ffc687b09
+      </a>
+    </p>
+  </section>
+
   <!-- About Token -->
   <section id="about">
     <h2>About CICAL Token</h2>
     <p>
-      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 1% for holders, 1% for devs and marketing. Strategic investments trigger buybacks to ensure sustainable growth.
-    </p>
-  </section>
-
-  <!-- Project Goal -->
-  <section id="goal">
-    <h2>Our Mission</h2>
-    <p>
-      Our goal is to create a transparent, rewarding, and sustainable crypto ecosystem that benefits holders, developers, and investors while driving blockchain innovation.
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 ChicagoCapital | <a href="mailto:info@chicagocapitaloffical.com" style="color:#ffcc00;">Contact Us</a>
-  </footer>
-
-</body>
-</html>
+      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 1%
