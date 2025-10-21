@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChicagoCapital</title>
+  <title>ChicagoCapital (CICAL) - Official Site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta name="description" content="Official page of ChicagoCapital (CICAL) Token - Transparent, Sustainable, and Rewarding Crypto Ecosystem on Binance Smart Chain.">
+  <meta name="keywords" content="ChicagoCapital, CICAL, BSC, token, crypto, DeFi, PancakeSwap, burn tracker">
+  <meta name="author" content="Chicago Capital">
   <style>
     * {margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif;}
     body {background:#f9f9f9; color:#222;}
@@ -28,7 +31,7 @@
     section h2 {text-align:center; font-size:2em; margin-bottom:20px;}
     section p {font-size:1.1em; line-height:1.6; text-align:center;}
     iframe {
-      display:block;
+      display:none;
       width:100%;
       height:500px;
       border:none;
@@ -36,10 +39,10 @@
       margin:30px auto;
       background:#fff;
     }
-    .buy-button {
+    .button {
       display:block;
       width:fit-content;
-      margin:10px auto 0;
+      margin:15px auto;
       padding:12px 25px;
       background:#ffcc00;
       color:#1e3c72;
@@ -48,8 +51,10 @@
       border-radius:10px;
       transition:0.3s;
       font-size:1.1em;
+      cursor:pointer;
+      text-align:center;
     }
-    .buy-button:hover {background:#ffd633; transform:scale(1.05);}
+    .button:hover {background:#ffd633; transform:scale(1.05);}
     footer {
       background:#222; color:#fff; text-align:center; padding:20px; margin-top:50px;
     }
@@ -78,17 +83,19 @@
   <section id="about">
     <h2>About CICAL Token</h2>
     <p>
-      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain,
-      1% for holders, and 1% for devs and marketing. Strategic investments trigger buybacks to ensure sustainable growth.
+      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee:
+      1% auto-burn until 10M tokens remain, 1% for holders, and 1% for devs and marketing.
+      Strategic investments trigger buybacks to ensure sustainable growth.
     </p>
 
-    <!-- Burn Tracker -->
-    <iframe src="https://chicagocapital.github.io/CICAL-Burn-Tracker/" title="CICAL Burn Tracker">
-      Your browser does not support iframes.
-    </iframe>
+    <!-- Burn Tracker Button -->
+    <button class="button" onclick="toggleTracker()">🔥 View Burn Tracker</button>
+
+    <!-- Hidden Tracker -->
+    <iframe id="burnTracker" src="https://chicagocapital.github.io/CICAL-Burn-Tracker/" title="CICAL Burn Tracker"></iframe>
 
     <!-- Buy Button -->
-    <a class="buy-button"
+    <a class="button"
        href="https://pancakeswap.finance/swap?outputCurrency=0xFAF994EBf5598BDC70f157957957333Ffc687b09"
        target="_blank">🛒 Buy on PancakeSwap</a>
   </section>
@@ -104,5 +111,16 @@
   <footer>
     &copy; 2025 ChicagoCapital | <a href="mailto:info@chicagocapitaloffical.com">Contact Us</a>
   </footer>
+
+  <script>
+    function toggleTracker() {
+      const tracker = document.getElementById("burnTracker");
+      if (tracker.style.display === "none" || tracker.style.display === "") {
+        tracker.style.display = "block";
+      } else {
+        tracker.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
