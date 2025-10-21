@@ -3,10 +3,10 @@
 <head>  
   <meta charset="UTF-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>ChicagoCapital</title>  
+  <title>ChicagoCapital (CICAL)</title>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
   <style>  
-    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}  
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif;}  
     body {background:#f9f9f9; color:#222;}  
     header {  
       background: linear-gradient(135deg, #1e3c72, #2a5298);  
@@ -14,65 +14,91 @@
       text-align: center;  
       padding: 80px 20px;  
     }  
-    header img {width: 150px; margin-bottom: 20px;}  
+    header img {width: 150px; margin-bottom: 20px; border-radius: 50%;}  
     header h1 {font-size: 3em; margin-bottom: 10px;}  
     header p {font-size: 1.2em; margin-bottom: 30px;}  
     .social-icons a {  
-      display: inline-block;  
-      margin: 0 10px;  
-      color: #fff;  
-      font-size: 1.5em;  
-      transition: transform 0.3s, color 0.3s;  
+      display:inline-block;  
+      margin:0 10px;  
+      color:#fff;  
+      font-size:1.5em;  
+      transition:transform 0.3s, color 0.3s;  
     }  
     .social-icons a:hover {  
-      color: #ffcc00;  
-      transform: scale(1.2);  
-    }  
-    /* Tombol Burn Tracker */  
-    .burn-tracker-btn {  
-      display: inline-block;  
-      margin-top: 30px;  
-      background-color: #ffcc00;  
-      color: #1e3c72;  
-      font-weight: bold;  
-      padding: 12px 25px;  
-      border-radius: 8px;  
-      text-decoration: none;  
-      transition: background-color 0.3s, transform 0.3s;  
-    }  
-    .burn-tracker-btn:hover {  
-      background-color: #ffd633;  
-      transform: scale(1.05);  
+      color:#ffcc00;  
+      transform:scale(1.2);  
     }  
     section {  
-      max-width: 1000px;  
-      margin: 50px auto;  
-      padding: 0 20px;  
-      text-align: center;  
+      max-width:1000px;  
+      margin:50px auto;  
+      padding:0 20px;  
     }  
-    section h2 {font-size:2em; margin-bottom:20px;}  
-    section p {font-size:1.1em; line-height:1.6; margin-bottom: 20px;}  
+    section h2 {text-align:center; font-size:2em; margin-bottom:20px; color:#1e3c72;}  
+    section p {font-size:1.1em; line-height:1.6; text-align:center;}  
+    .burn-tracker {  
+      text-align:center;  
+      margin-top:30px;  
+    }  
+    .burn-tracker a {  
+      display:inline-block;  
+      padding:10px 20px;  
+      background:#1e3c72;  
+      color:#fff;  
+      border-radius:8px;  
+      text-decoration:none;  
+      transition:background 0.3s;  
+    }  
+    .burn-tracker a:hover {  
+      background:#ffcc00;  
+      color:#222;  
+    }  
+    .policy-button {  
+      display: flex;  
+      justify-content: center;  
+      margin-top: 40px;  
+    }  
+    .policy-button a {  
+      display: inline-block;  
+      background: #2a5298;  
+      color: #fff;  
+      padding: 12px 24px;  
+      border-radius: 10px;  
+      text-decoration: none;  
+      font-weight: bold;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+      transition: 0.3s;  
+    }  
+    .policy-button a:hover {  
+      background: #ffcc00;  
+      color: #222;  
+      transform: translateY(-3px);  
+    }  
     footer {  
       background:#222;  
       color:#fff;  
       text-align:center;  
       padding:20px;  
       margin-top:50px;  
+      font-size:0.95em;  
     }  
-    @media (max-width: 600px) {  
+    footer a {color:#ffcc00; text-decoration:none;}  
+    footer a:hover {text-decoration:underline;}  
+    @media (max-width:600px){  
       header h1 {font-size:2em;}  
       header p {font-size:1em;}  
       .social-icons a {font-size:1.2em; margin:0 5px;}  
+      .policy-button a {padding:10px 20px; font-size:0.9em;}  
     }  
   </style>  
 </head>  
+
 <body>  
+
   <!-- Banner & Logo -->  
   <header>  
     <img src="https://turquoise-negative-scorpion-35.mypinata.cloud/ipfs/bafkreif35e43qlnw2qkg3igxy62jjq5lemmrwcj4fj7z4lwyf4erckynua" alt="ChicagoCapital Logo">  
     <h1>ChicagoCapital</h1>  
     <p>CICAL Token – Transparent, Sustainable, and Rewarding Crypto Ecosystem</p>  
-
     <div class="social-icons">  
       <a href="https://x.com/Chicag0Capital?t=M5s5tdMSW51hxF2vF9hVQA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>  
       <a href="https://t.me/Chicag0_Capital" target="_blank"><i class="fab fa-telegram"></i></a>  
@@ -85,16 +111,17 @@
   <section id="about">  
     <h2>About CICAL Token</h2>  
     <p>  
-      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 1% for holders, 1% for devs and marketing. Strategic investments trigger buybacks to ensure sustainable growth.  
+      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee:  
+      1% auto-burn until 10M tokens remain, 1% for holders, 1% for devs and marketing.  
+      Strategic investments trigger buybacks to ensure sustainable growth.  
     </p>  
 
-    <!-- 🔥 Tombol Burn Tracker di bawah About -->
-    <a href="https://chicagocapital.github.io/CICAL-Burn-Tracker/" target="_blank" class="burn-tracker-btn">
-      🔥 View CICAL Burn Tracker
-    </a>
+    <div class="burn-tracker">  
+      <a href="https://chicagocapital.github.io/CICAL-Burn-Tracker/" target="_blank">🔥 View CICAL Burn Tracker</a>  
+    </div>  
   </section>  
 
-  <!-- Project Goal -->  
+  <!-- Mission -->  
   <section id="goal">  
     <h2>Our Mission</h2>  
     <p>  
@@ -102,9 +129,17 @@
     </p>  
   </section>  
 
+  <!-- Privacy Policy Button -->  
+  <div class="policy-button">  
+    <a href="privacy-policy.html">🔒 Read Our Privacy Policy</a>  
+  </div>  
+
   <!-- Footer -->  
   <footer>  
-    &copy; 2025 ChicagoCapital | <a href="mailto:info@chicagocapitaloffical.com" style="color:#ffcc00;">Contact Us</a>  
+    &copy; 2025 ChicagoCapital |  
+    <a href="mailto:info@chicagocapitaloffical.com">Contact Us</a> |  
+    <a href="privacy-policy.html">Privacy Policy</a>  
   </footer>  
+
 </body>  
 </html>
