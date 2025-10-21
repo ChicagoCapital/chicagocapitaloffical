@@ -6,77 +6,63 @@
   <title>ChicagoCapital</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif;}
     body {background:#f9f9f9; color:#222;}
     header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
+      background: linear-gradient(135deg,#1e3c72,#2a5298);
+      color:#fff;
+      text-align:center;
+      padding:80px 20px;
     }
-    header img {width: 150px; margin-bottom: 20px;}
-    header h1 {font-size: 3em; margin-bottom: 10px;}
-    header p {font-size: 1.2em; margin-bottom: 30px;}
+    header img {width:150px; margin-bottom:20px;}
+    header h1 {font-size:3em; margin-bottom:10px;}
+    header p {font-size:1.2em; margin-bottom:30px;}
     .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #fff;
-      font-size: 1.5em;
-      transition: transform 0.3s, color 0.3s;
+      display:inline-block; margin:0 10px; color:#fff; font-size:1.5em;
+      transition:transform 0.3s,color 0.3s;
     }
-    .social-icons a:hover {
-      color: #ffcc00;
-      transform: scale(1.2);
-    }
+    .social-icons a:hover {color:#ffcc00; transform:scale(1.2);}
     section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
+      max-width:1000px; margin:50px auto; padding:0 20px;
     }
     section h2 {text-align:center; font-size:2em; margin-bottom:20px;}
     section p {font-size:1.1em; line-height:1.6; text-align:center;}
-    footer {
-      background:#222;
-      color:#fff;
-      text-align:center;
-      padding:20px;
-      margin-top:50px;
-    }
-    footer a { color:#ffcc00; text-decoration:none; }
-    footer a:hover { text-decoration:underline; }
     iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 20px;
+      display:block;
+      width:100%;
+      height:500px;
+      border:none;
+      border-radius:10px;
+      margin:30px auto;
+      background:#fff;
     }
     .buy-button {
-      display: block;
-      width: fit-content;
-      margin: 25px auto 0;
-      padding: 12px 25px;
-      background: #ffcc00;
-      color: #1e3c72;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: 0.3s;
-      font-size: 1.1em;
+      display:block;
+      width:fit-content;
+      margin:10px auto 0;
+      padding:12px 25px;
+      background:#ffcc00;
+      color:#1e3c72;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+      font-size:1.1em;
     }
-    .buy-button:hover {
-      background: #ffd633;
-      transform: scale(1.05);
+    .buy-button:hover {background:#ffd633; transform:scale(1.05);}
+    footer {
+      background:#222; color:#fff; text-align:center; padding:20px; margin-top:50px;
     }
-    @media (max-width: 600px) {
-      header h1 {font-size:2em;}
-      header p {font-size:1em;}
-      .social-icons a {font-size:1.2em; margin:0 5px;}
+    footer a {color:#ffcc00; text-decoration:none;}
+    footer a:hover {text-decoration:underline;}
+    @media(max-width:600px){
+      header h1{font-size:2em;}
+      header p{font-size:1em;}
+      iframe{height:400px;}
     }
   </style>
 </head>
 <body>
-  <!-- Banner & Logo -->
   <header>
     <img src="https://turquoise-negative-scorpion-35.mypinata.cloud/ipfs/bafkreif35e43qlnw2qkg3igxy62jjq5lemmrwcj4fj7z4lwyf4erckynua" alt="ChicagoCapital Logo">
     <h1>ChicagoCapital</h1>
@@ -89,35 +75,32 @@
     </div>
   </header>
 
-  <!-- About Token -->
   <section id="about">
     <h2>About CICAL Token</h2>
     <p>
-      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain, 
+      ChicagoCapital (CICAL) is a 1B supply token with a 3% transaction fee: 1% auto-burn until 10M tokens remain,
       1% for holders, and 1% for devs and marketing. Strategic investments trigger buybacks to ensure sustainable growth.
     </p>
 
     <!-- Burn Tracker -->
-    <iframe src="https://chicagocapital.github.io/CICAL-Burn-Tracker/" title="CICAL Burn Tracker"></iframe>
+    <iframe src="https://chicagocapital.github.io/CICAL-Burn-Tracker/" title="CICAL Burn Tracker">
+      Your browser does not support iframes.
+    </iframe>
 
-    <!-- PancakeSwap Buy Button -->
-    <a class="buy-button" 
-       href="https://pancakeswap.finance/swap?outputCurrency=0xFAF994EBf5598BDC70f157957957333Ffc687b09" 
-       target="_blank">
-       🛒 Buy on PancakeSwap
-    </a>
+    <!-- Buy Button -->
+    <a class="buy-button"
+       href="https://pancakeswap.finance/swap?outputCurrency=0xFAF994EBf5598BDC70f157957957333Ffc687b09"
+       target="_blank">🛒 Buy on PancakeSwap</a>
   </section>
 
-  <!-- Project Goal -->
   <section id="goal">
     <h2>Our Mission</h2>
     <p>
-      Our goal is to create a transparent, rewarding, and sustainable crypto ecosystem that benefits holders, developers, 
+      Our goal is to create a transparent, rewarding, and sustainable crypto ecosystem that benefits holders, developers,
       and investors while driving blockchain innovation.
     </p>
   </section>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 ChicagoCapital | <a href="mailto:info@chicagocapitaloffical.com">Contact Us</a>
   </footer>
